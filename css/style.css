@@ -764,6 +764,7 @@ h2 {
 
 /* section books */
 
+
 /* footer */
 
 .footer {
@@ -959,10 +960,6 @@ h2 {
 
     .icon__btn {
         display: flex;
-    }
-
-    .header {
-        padding: 10px 0;
     }
 
     .header__title {
