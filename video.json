@@ -1,6 +1,6 @@
 [
     {
         "title": "Книга 1",
-        "video": "/image/video1.mp4"
+        "video": "./image/video1.mp4"
     }
 ]
