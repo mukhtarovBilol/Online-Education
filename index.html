@@ -333,7 +333,7 @@
     <script src="script.js"></script>
     <script>
         // Загружаем данные с сервера
-        fetch('/books.json')
+        fetch('./books.json')
             .then(response => response.json())
             .then(data => {
                 const productsList = document.getElementById('productsList');
