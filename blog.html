@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+        /* Стили для карточек */
+        .productsVideo__card {
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .productsVideo__card video {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .productsVideo__card-content {
+            padding: 15px;
+        }
+
+        .productsVideo__card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+
+        .book-card__link {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .productsVideo__card {
+                width: 90%;
+                /* карточка будет занимать 90% экрана */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .productsVideo__card {
+                width: 100%;
+                /* карточка будет занимать всю ширину экрана */
+                margin: 10px 0;
+                /* уменьшение отступов */
+            }
+
+            .productsVideo__card-title {
+                font-size: 16px;
+                /* уменьшение размера шрифта для мобильных */
+            }
+
+            .book-card__link {
+                font-size: 14px;
+                /* уменьшение размера шрифта ссылки */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay" onclick="closeMenu()"></div>
+    <nav class="nav">
+        <div class="container">
+            <a href="/index.html" class="nav__logo">Online Dars</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#course-info" class="nav__link" onclick="closeMenu()">Kurs haqida</a></li>
+                <li class="nav__item"><a href="index.html#question" class="nav__link" onclick="closeMenu()">Savol javob</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link" onclick="closeMenu()">Kontak</a></li>
+                <li class="nav__item"><a href="books.html" class="nav__link" onclick="closeMenu()">Kitoblar</a></li>
+                <li class="nav__item"><a href="blog.html" class="nav__link" onclick="closeMenu()">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="productsVideo" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+    </div>
+
+    <script>
+        // Загружаем данные с сервера
+        fetch('/video.json')
+            .then(response => response.json())
+            .then(data => {
+                const productsList = document.getElementById('productsVideo');
+                if (data && Array.isArray(data)) {
+                    data.forEach(book => {
+                        const bookCard = document.createElement('div');
+                        bookCard.classList.add('productsVideo__card');
+
+                        // Создаем элемент карточки с видео
+                        bookCard.innerHTML = `
+                            <video class="book-card__video" controls>
+                                <source src="${book.video}" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <div class="productsVideo__card-content">
+                                <h3 class="productsVideo__card-title">${book.title}</h3>
+                            </div>
+                        `;
+
+                        // Обработчик для открытия видео на весь экран
+                        const videoElement = bookCard.querySelector('.book-card__video');
+                        videoElement.addEventListener('click', function () {
+                            if (videoElement.requestFullscreen) {
+                                videoElement.requestFullscreen();
+                            } else if (videoElement.mozRequestFullScreen) { // Firefox
+                                videoElement.mozRequestFullScreen();
+                            } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                                videoElement.webkitRequestFullscreen();
+                            } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                                videoElement.msRequestFullscreen();
+                            }
+                        });
+
+                        productsList.appendChild(bookCard);
+                    });
+                } else {
+                    productsList.innerHTML = '<p>Видео не найдены.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+                document.getElementById('productsVideo').innerHTML = '<p>Произошла ошибка при загрузке видео.</p>';
+            });
+
+        function toggleMenu() {
+            document.querySelector('.nav__list').classList.toggle('active');
+            document.querySelector('.burger').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.querySelector('.nav__list').classList.remove('active');
+            document.querySelector('.burger').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>

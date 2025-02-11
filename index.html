@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamonaviy Texnologiyalar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="overlay" onclick="closeMenu()"></div>
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="nav__logo">Online Dars</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#course-info" class="nav__link" onclick="closeMenu()">Kurs haqida</a></li>
+                <li class="nav__item"><a href="#question" class="nav__link" onclick="closeMenu()">Savol javob</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link" onclick="closeMenu()">Kontak</a></li>
+                <li class="nav__item"><a href="books.html" class="nav__link" onclick="closeMenu()">Kitoblar</a></li>
+                <li class="nav__item"><a href="blog.html" class="nav__link" onclick="closeMenu()">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__desc">
+                <h1 class="header__title">Zamonaviy Texnologiyalar Yordamida Ingliz Tilini O'rgatish</h1>
+                <p class="header__txt"> Zamonaviy texnologiyalar bugungi kunda ta'limning barcha sohalarida keng
+                    tarqalgan bo'lib, ingliz tilini o'rgatish ham bundan mustasno emas. Uning
+                    afzalliklari ko'p: o'quvchilar uchun qiziqarli va samarali ta'limni ta'minlash,
+                    o'qitish jarayonini tezlashtirish va ingliz tili bilimlarini chuqurlashtirish. Bu
+                    ma'ruza zamonaviy texnologiyalar yordamida ingliz tilini o'rgatishning eng
+                    samarali usullarini o'rganishga bag'ishlanadi.</p>
+                <div class="header__name">
+                    <span class="header__icon">SA</span>
+                    <p class="header__name-title"> tomonidan Sanjar Abdullaev</p>
+                </div>
+                <!-- From Uiverse.io by kleenpulse -->
+                <div class="icon__btn">
+                    <button id="openModalButton" class="open-modal-btn header__btn">Kursga yozilish</button>
+                </div>
+
+            </div>
+            <!-- <img src="./image/header-bg.png" alt="" class="header__image"> -->
+        </div>
+    </header>
+
+    <main>
+        <section class="why-choose">
+            <div class="container">
+                <h2>🤔 Nima uchun bizni tanlashingiz kerak?</h2>
+                <div class="why-choose__cards">
+                    <div class="why-choose__card">
+                        <div class="why-choose__card-desc">
+                            <strong>
+                                <span>1</span>
+                            </strong>
+                            <strong>Mutaxassis O'qituvchilar 👩‍🏫:</strong>
+                        </div>
+                        <p class="why-choose__card-desc-txt">Tajribali mutaxassislar sizga yordam beradi.</p>
+                    </div>
+                    <div class="why-choose__card">
+                        <div class="why-choose__card-desc">
+                            <strong>
+                                <span>2</span>
+                            </strong>
+                            <strong>Amaliy Mashg'ulotlar 📝:</strong>
+                        </div>
+                        <p class="why-choose__card-desc-txt">Insholarni tahlil qilish va amaliy darslar.</p>
+                    </div>
+                    <div class="why-choose__card">
+                        <div class="why-choose__card-desc">
+                            <strong>
+                                <span>3</span>
+                            </strong>
+                            <strong>Yuqori Natijalar 🏆:</strong>
+                        </div>
+                        <p class="why-choose__card-desc-txt">Talabalarimiz yuqori ball olishadi.</p>
+                    </div>
+                    <div class="why-choose__card">
+                        <div class="why-choose__card-desc">
+                            <strong>
+                                <span>4</span>
+                            </strong>
+                            <strong>Moslashuvchan Dars Jadvali 📅:</strong>
+                        </div>
+                        <p class="why-choose__card-desc-txt"> Sizga qulay jadval.</p>
+                    </div>
+                    <div class="why-choose__card">
+                        <div class="why-choose__card-desc">
+                            <strong>
+                                <span>5</span>
+                            </strong>
+                            <strong>Qo'shimcha Resurslar 📚:</strong>
+                        </div>
+                        <p class="why-choose__card-desc-txt"> Testlar va darsliklar taqdim etiladi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-info" id="course-info">
+            <div class="conatiner">
+                <h2 class="course-info__title">Darslar haqida ma'lumot</h2>
+
+                <div class="course-info__details">
+                    <div class="course-info__item animate-on-scroll">
+                        <i class="course-info__icon fa fa-book"></i>
+                        <p class="course-info__text"><strong>Dars Mavzusi:</strong> IELTS va CEFR insho yozish</p>
+                    </div>
+                    <div class="course-info__item animate-on-scroll">
+                        <i class="course-info__icon fa fa-clock"></i>
+                        <p class="course-info__text"><strong>Davomiyligi:</strong> 4 hafta (haftasiga 2 marta)</p>
+                    </div>
+                    <div class="course-info__item animate-on-scroll">
+                        <i class="course-info__icon fa fa-calendar"></i>
+                        <p class="course-info__text"><strong>Vaqti:</strong> Sizga qulay vaqtda</p>
+                    </div>
+                    <div class="course-info__item animate-on-scroll">
+                        <i class="course-info__icon fa fa-map-marker-alt"></i>
+                        <p class="course-info__text"><strong>Manzil:</strong> Onlayn yoki oflayn variantlar mavjud</p>
+                    </div>
+                </div>
+
+                <div class="course-info__offer">
+                    <h3 class="course-info__offer-title">▎Maxsus Taklif!</h3>
+                    <p class="course-info__offer-text">Birinchi dars bepul! Ro'yxatdan o'ting va darsimizni sinab
+                        ko'ring.
+                        Shuningdek, 10% chegirma bilan birinchi oy uchun ro'yxatdan o'tganlarga maxsus taklif!</p>
+                </div>
+            </div>
+        </section>
+        <section class="module">
+            <div class="container">
+                <h2 class="module__title">Kurs dasturi</h2>
+                <div class="module__cards">
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>1-modul: Grammatika asoslari</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga ingliz tilidagi asosiy grammatik qoidalarni tushuntirish va ularni
+                                amaliy mashg‘ulotlar orqali mustahkamlash.</p>
+                        </div>
+                    </div>
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>2-modul: IELTS va CEFRga tayyorgarlik</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga IELTS va CEFR tizimlarining tuzilishi, baholash mezonlari va
+                                tayyorgarlik strategiyalari haqida chuqur tushuncha berish.</p>
+                        </div>
+                    </div>
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>3-modul: IELTS va CEFRda Insho va Esse Yozishni O‘rganish</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga IELTS va CEFR standartlariga mos ravishda insho va esse yozishni
+                                o‘rganish, yozma ishlarni samarali rejalashtirish va baholash ko‘nikmalarini
+                                rivojlantirish.</p>
+                        </div>
+                    </div>
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>4-modul: IELTS va CEFR Speaking Ko‘nikmalarini Rivojlantirish</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga IELTS va CEFR standartlariga mos ravishda speaking ko‘nikmalarini
+                                rivojlantirish, savollarga tez va aniq javob berish, fikrlarni ravon ifodalash va
+                                muloqotda ishtirok etish imkoniyatlarini oshirish.</p>
+                        </div>
+                    </div>
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>5-modul: Ingliz Tili Umumiy Nutq Ko‘nikmalarini Rivojlantirish</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga ingliz tilida kundalik muloqotda o‘z fikrlarini aniq va ravon ifodalash,
+                                savollarga javob berish va suhbatda faol ishtirok etish imkoniyatlarini oshirish.</p>
+                        </div>
+                    </div>
+                    <div class="module__card">
+                        <div class="module__card-header">
+                            <h3>6-modul: Ingliz Tili Insho Yozishda Kerak Bo‘ladigan Texnikalar va Metodlar</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="module__hr">
+                        <div class="module__card-answer">
+                            <p>Ishtirokchilarga ingliz tilida aniq, mantiqiy va ta'sirli insholar yozish uchun zarur
+                                bo‘lgan texnika va metodlarni o‘rgatish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="books">
+            <div class="container">
+                <h2 class="books__title">Kitoblar</h2>
+                <div class="products-list" id="productsList">
+
+                </div>
+                <a href="./books.html" class="books__link">Ko'proq kitoblar</a>
+            </div>
+        </section>
+        <section class="question" id="question">
+            <div class="container">
+                <h2 class="question__title">Ko'p beriladigan savollarga javoblar:</h2>
+                <div class="question__cards">
+                    <div class="question__card">
+                        <div class="question__card-header">
+                            <h3>Q: Bu qanday ishlaydi?</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="question__hr">
+                        <div class="question__card-answer">
+                            <p>A: Bu savolning javobi oddiy. Sizga kerakli ma'lumotlarni topishingiz mumkin.</p>
+                        </div>
+                    </div>
+                    <div class="question__card">
+                        <div class="question__card-header">
+                            <h3>Q: Bu qanday ishlaydi?</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="question__hr">
+                        <div class="question__card-answer">
+                            <p>A: Bu savolning javobi oddiy. Sizga kerakli ma'lumotlarni topishingiz mumkin.</p>
+                        </div>
+                    </div>
+                    <div class="question__card">
+                        <div class="question__card-header">
+                            <h3>Q: Bu qanday ishlaydi?</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="question__hr">
+                        <div class="question__card-answer">
+                            <p>A: Bu savolning javobi oddiy. Sizga kerakli ma'lumotlarni topishingiz mumkin.</p>
+                        </div>
+                    </div>
+                    <div class="question__card">
+                        <div class="question__card-header">
+                            <h3>Q: Bu qanday ishlaydi?</h3>
+                            <span class="toggle-button">+</span>
+                        </div>
+                        <hr class="question__hr">
+                        <div class="question__card-answer">
+                            <p>A: Bu savolning javobi oddiy. Sizga kerakli ma'lumotlarni topishingiz mumkin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <hr>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Sahifalar</h3>
+                    <ul class="footer__list">
+                        <li><a href="#course-info">Kurs haqida</a></li>
+                        <li><a href="#question">Savol-javob</a></li>
+                        <li><a href="./books.html">Kitoblar</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Aloqa</h3>
+                    <ul class="footer__list">
+                        <li><a href="tel:+998995208259">+99899 520 82 59</a></li>
+                        <li><a href="tel:+998995218259">+998 99 521 82 59</a></li>
+                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Maxfiylik siyosati</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Maxfiylik siyosati</a></li>
+                        <li><a href="#">Foydalanish shartlari</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <h2 class="modal__title">Kursga yozilish</h2>
+            <form class="form" id="userForm">
+                <div class="form__field">
+                    <label for="name" class="form__label">Ism </label>
+                    <input type="text" id="name" class="form__input" placeholder="Enter your name" required>
+                </div>
+                <div class="form__field">
+                    <label for="phone" class="form__label">Telefon raqam</label>
+                    <input type="tel" id="phone" class="form__input" maxlength="14" placeholder="+998 99 999-99-99"
+                        required>
+
+                </div>
+                <button type="submit" class="form__button">Jo'natish</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Загружаем данные с сервера
+        fetch('/books.json')
+            .then(response => response.json())
+            .then(data => {
+                const productsList = document.getElementById('productsList');
+                if (data && Array.isArray(data)) {
+                    // Ограничиваем количество книг до 4
+                    const booksToDisplay = data.slice(0, 4);
+                    booksToDisplay.forEach(book => {
+                        const bookCard = document.createElement('div');
+                        bookCard.classList.add('book-card');
+                        bookCard.innerHTML = `
+                            <img src="${book.image}" alt="${book.title}" class="book-card__image">
+                            <div class="book-card__content">
+                                <h3 class="book-card__title">${book.title}</h3>
+                                <a href="${book.telegramLink}" target="_blank" class="book-card__link">Telegramga o'tish</a>
+                                <a href="${book.telegramLink}" target="_blank" class="book-card__link mobile-link">
+                                    <img src="/image/telegramm.webp" alt="">    
+                                </a>
+                            </div>
+                        `;
+                        productsList.appendChild(bookCard);
+                    });
+                } else {
+                    productsList.innerHTML = '<p>Книги не найдены.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+                document.getElementById('productsList').innerHTML = '<p>Произошла ошибка при загрузке книг.</p>';
+            });
+    </script>
+
+
+</body>
+
+</html>

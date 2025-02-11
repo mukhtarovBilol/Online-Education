@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Книга 1",
+        "image": "/image/ielts.jpg",
+        "telegramLink": "https://t.me/somechannel2"
+    },
+    {
+        "title": "Книга 2",
+        "image": "/image/vocab.jpg",
+        "telegramLink": "https://t.me/somechannel2"
+    },
+    {
+        "title": "Книга 1",
+        "image": "/image/ielts.jpg",
+        "telegramLink": "https://t.me/somechannel2"
+    },
+    {
+        "title": "Книга 2",
+        "image": "/image/vocab.jpg",
+        "telegramLink": "https://t.me/somechannel2"
+    }
+    
+]

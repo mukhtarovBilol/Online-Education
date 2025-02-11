@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список книг</title>
+    <link rel="stylesheet" href="css/books.css">
+</head>
+
+<body>
+
+    <div class="overlay" onclick="closeMenu()"></div>
+    <nav class="nav">
+        <div class="container">
+            <a href="./index.html" class="nav__logo">Online Dars</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#course-info" class="nav__link" onclick="closeMenu()">Kurs haqida</a></li>
+                <li class="nav__item"><a href="index.html#question" class="nav__link" onclick="closeMenu()">Savol javob</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link" onclick="closeMenu()">Kontak</a></li>
+                <li class="nav__item"><a href="books.html" class="nav__link" onclick="closeMenu()">Kitoblar</a></li>
+                <li class="nav__item"><a href="blog.html" class="nav__link" onclick="closeMenu()">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="container" style="padding-top: 30px;">
+        <h1>Kitoblar</h1>
+
+        <div class="products-list" id="productsList">
+            <!-- Книги будут добавляться сюда -->
+        </div>
+    </div>
+
+    <script>
+        // Загружаем данные с сервера
+        fetch('/books.json')
+            .then(response => response.json())
+            .then(data => {
+                const productsList = document.getElementById('productsList');
+                if (data && Array.isArray(data)) {
+                    data.forEach(book => {
+                        const bookCard = document.createElement('div');
+                        bookCard.classList.add('book-card');
+                        bookCard.innerHTML = `
+                            <img src="${book.image}" alt="${book.title}" class="book-card__image">
+                            <div class="book-card__content">
+                                <h3 class="book-card__title">${book.title}</h3>
+                                <a href="${book.telegramLink}" target="_blank" class="book-card__link">Telegramga o'tish</a>
+                                
+                            </div>
+                        `;
+                        productsList.appendChild(bookCard);
+                    });
+                } else {
+                    productsList.innerHTML = '<p>Книги не найдены.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+                document.getElementById('productsList').innerHTML = '<p>Произошла ошибка при загрузке книг.</p>';
+            });
+
+
+        function toggleMenu() {
+            document.querySelector('.nav__list').classList.toggle('active');
+            document.querySelector('.burger').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.querySelector('.nav__list').classList.remove('active');
+            document.querySelector('.burger').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    </script>
+
+</body>
+
+</html>
